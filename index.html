@@ -1,0 +1,61 @@
+<style>
+    body {
+    margin: 0px;
+    background-color: black;
+    }
+    div{
+        position: fixed;
+        color: white;
+        font-size: 30px;
+        margin: 30px;
+        user-select: none;
+    }
+    .fg{
+        background: white;
+        width: 800px;
+        height: 300px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .bg{
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+    p, h1 {
+        color: black;
+        margin: 0px;
+
+    }
+    h1 {
+        margin-top: 40px;
+    }
+    button{
+        margin: 40px;
+        width: 400px;
+        padding: 20px;
+        border-radius: 50px;
+        color: azure;
+        font-size: larger;
+        background-color: blue;
+    }
+</style>
+<div>
+    <span>Score: </span><span id="scoreElement">0</span>
+</div>
+
+<div class ='bg' id='startElement'>
+    <div class = 'fg'>
+        <h1 id="finalScore">0</h1>
+        <p>Points</p>
+        <button id="startGameElement">Start Game</button>
+    </div>
+</div>
+
+
+<canvas></canvas>
+<script src="./index.js"></script>
