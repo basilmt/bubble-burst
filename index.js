@@ -125,8 +125,6 @@ function init() {
 function spawnEnemy(){
     setInterval(() => {
         const radius = Math.random() * (50 - 10) + 10
-
-
         let x
         let y
         if (Math.random() < 0.5) {
@@ -145,9 +143,13 @@ function spawnEnemy(){
             y: Math.sin(angle)
         }
         enemies.push(new Enemy(x, y, radius, color, velocity))
+
+        console.log(enemies);
+
     }, 1000)
 }
 
+spawnEnemy()
 let animationId
 function animate() {
     animationId = requestAnimationFrame(animate)
@@ -226,9 +228,6 @@ addEventListener('click', (event) => {
 
 startGameElement.addEventListener('click', () => {
     init()
-    console.log('here');
     animate()
-    spawnEnemy()
     startElement.style.display = 'none'
-    
 })
