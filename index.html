@@ -12,7 +12,7 @@
         margin: 0px;
         background-color: black;
         }
-        div{
+        .score{
             position: fixed;
             color: white;
             font-size: 30px;
@@ -21,19 +21,21 @@
         }
         .fg{
             background: white;
-            width: 800px;
-            height: 300px;
+            width: 50%;
+            min-width: max-content;
+            height: max-content;
             border-radius: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            
         }
         .bg{
             inset: 0;
+            position: fixed;
             display: flex;
             align-items: center;
             justify-items: center;
+            justify-content: center;
         }
         p, h1 {
             color: black;
@@ -45,7 +47,9 @@
         }
         button{
             margin: 40px;
-            width: 400px;
+            width: 40%;
+            min-width: max-content;
+            
             padding: 20px;
             border-radius: 50px;
             color: azure;
@@ -53,7 +57,7 @@
             background-color: blue;
         }
     </style>
-    <div>
+    <div class="score">
         <span>Score: </span><span id="scoreElement">0</span>
     </div>
     
